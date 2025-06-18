@@ -37,10 +37,10 @@ const onInput = (e) => {
 
 const handleSubmit = async () => {
   if (ptag.value.length === 4) {
-    await addTag(ptag.value);
-    ptag.value = '';
+    await addTag(ptag.value)
     await fetchTags();
-    fetchTasksForTag(ptag.value);
+    await fetchTasksForTag(ptag.value);
+    ptag.value = '';
   } else {
     alert('Enter exactly 4 capital letters');
   }

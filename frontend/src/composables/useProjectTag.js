@@ -24,13 +24,13 @@ const fetchTags = async () => {
   }
 };
 
-const addTag = (tag) => {
-  fetchTags();
+const addTag = async (tag) => {
+  await fetchTags();
   if (checkDupl(tag) == false ){
     alert("Tag already exists")
   }
   else {
-    handleValid(tag);
+    await handleValid(tag);
   }
 };
 
