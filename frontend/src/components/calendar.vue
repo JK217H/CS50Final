@@ -73,12 +73,10 @@ onMounted (async () => {
 
 
 <template>
-  <!-- Whole page wrapper -->
   <div>
 
-    <!-- Flex row: calendar on left -->
     <div class="flex flex-row">
-      <!-- Calendar block -->
+
       <div>
         <div class="calendar-header">
           <button class="ml-1 px-2 py-1 bg-green-600 text-white rounded hover:bg-green-700" @click="goToPrevMonth">Prev</button>
@@ -108,7 +106,7 @@ onMounted (async () => {
       </div>
     </div>
 
-    <!-- ✅ Task section centered relative to page -->
+
     <div class="max-w-xl mx-auto md:-mt-72 text-center">
       <div class="tasks-list">
         <h2 v-if="filteredTasks.length" class="text-xl font-semibold mb-2">Tasks for {{ selectedDate }}</h2>
